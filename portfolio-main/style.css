@@ -778,3 +778,20 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+section {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 20px;
+}
+
+#about-me, #contact-me {
+    overflow-wrap: break-word; /* Ensures long text wraps */
+    word-break: break-word; /* Prevents long words from causing overflow */
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    #about-me, #contact-me {
+        padding: 10px;
+    }
+}
