@@ -789,3 +789,109 @@ video {
     max-width: 32rem;
   }
 }
+/* Default styles (for larger screens) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Small devices (up to 600px, e.g., mobile) */
+@media only screen and (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    main article h1 {
+        font-size: 2.5rem;
+    }
+
+    main article p {
+        font-size: 1rem;
+    }
+
+    section#about aside img {
+        width: 80px;
+        height: 80px;
+    }
+
+    section#resume, section#project {
+        margin: 10px;
+    }
+
+    section#project div {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+}
+
+/* Medium devices (601px to 1024px, e.g., tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    header nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    main article h1 {
+        font-size: 4rem;
+    }
+
+    main article p {
+        font-size: 1.5rem;
+    }
+
+    section#about aside img {
+        width: 100px;
+        height: 100px;
+    }
+
+    section#resume, section#project {
+        margin: 20px;
+    }
+
+    section#project div {
+        width: 45%;
+        height: auto;
+        margin: 5px;
+    }
+}
+
+/* Large devices (1025px and up, e.g., desktops) */
+@media only screen and (min-width: 1025px) {
+    header nav ul {
+        justify-content: center;
+    }
+
+    main article h1 {
+        font-size: 5rem;
+    }
+
+    main article p {
+        font-size: 2rem;
+    }
+
+    section#about aside img {
+        width: 120px;
+        height: 120px;
+    }
+
+    section#resume, section#project {
+        margin: 50px;
+    }
+
+    section#project div {
+        width: 30%;
+        height: auto;
+        margin: 15px;
+    }
+}
