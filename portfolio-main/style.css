@@ -881,3 +881,47 @@ header nav {
     margin: 10px 0;
   }
 }
+/* Initially hide the menu on mobile */
+#menu {
+  display: flex;
+}
+
+#menu.hidden {
+  display: none;
+}
+
+/* Style for the hamburger icon */
+#menu-btn {
+  display: none; /* Hidden on larger screens */
+}
+
+@media (max-width: 768px) {
+  /* Show the hamburger button only on mobile */
+  #menu-btn {
+    display: block;
+  }
+
+  /* Hide the menu by default on mobile */
+  #menu {
+    display: none;
+    flex-direction: column; /* Stack menu items vertically on mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+  }
+
+  /* Make the menu visible when toggled */
+  #menu.hidden {
+    display: none;
+  }
+
+  #menu:not(.hidden) {
+    display: flex;
+  }
+
+  #menu li {
+    margin: 10px 0;
+  }
+}
