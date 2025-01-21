@@ -25,7 +25,7 @@
     </button>
 
     <!-- Navigation Links -->
-    <ul id="menu" class="flex justify-center items-center text-base px-4 font-semibold text-center">
+    <ul id="menu" class="flex justify-center items-center text-base px-4 font-semibold text-center hidden lg:flex">
       <li class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white">
         <a href="#home">HOME</a>
       </li>
@@ -232,10 +232,16 @@ Git Hub: https://github.com/Karina-16
 		</footer>
 	</body>
 	<script>
+  // Ensure the menu is hidden on page load
+  window.onload = function() {
+    const menu = document.getElementById('menu');
+    menu.classList.add('hidden');  // Hide the menu by default
+  };
+
   // Toggle menu visibility for mobile view
   function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('hidden'); // Toggles 'hidden' class to show/hide menu
+    menu.classList.toggle('hidden');  // Toggles 'hidden' class to show/hide menu
   }
 </script>
 </html>
