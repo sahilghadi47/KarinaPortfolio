@@ -795,3 +795,89 @@ section {
         padding: 10px;
     }
 }
+/* Ensure this is included in your style.css */
+
+/* General Reset for Mobile Responsiveness */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header nav ul {
+  flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 5px 10px; /* Reduce spacing for smaller screens */
+}
+
+header nav {
+  padding: 10px;
+}
+
+/* About Me Section */
+#about {
+  flex-direction: column; /* Stack elements vertically on smaller screens */
+  text-align: center;
+}
+
+#about aside {
+  margin-bottom: 15px; /* Add spacing below the image */
+}
+
+#about img {
+  width: 100px;
+  height: 100px;
+}
+
+#about article {
+  padding: 10px;
+}
+
+#about pre {
+  white-space: normal; /* Prevent preformatted text from overflowing */
+  word-wrap: break-word;
+}
+
+/* Contact Section */
+#contact pre {
+  font-size: 14px; /* Reduce font size for smaller screens */
+  line-height: 1.5;
+}
+
+/* General Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack menu items vertically */
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  #resume, #about {
+    padding: 15px;
+  }
+
+  #about img {
+    width: 80px;
+    height: 80px; /* Scale profile image further */
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer a {
+    margin: 10px 0;
+  }
+}
