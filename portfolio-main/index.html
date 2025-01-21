@@ -14,40 +14,36 @@
 	</head>
 	<body>
 		<header>
-			<nav
-				class="z-10 fixed top-0 left-0 w-screen flex justify-center items-center bg-slate-800 backdrop-blur-md shadow-md"
-			>
-				<ul
-					class="flex justify-center items-center text-base px-4 font-semibold text-center"
-				>
-					<li
-						class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white"
-					>
-						<a href="#home">HOME</a>
-					</li>
-					<li
-						class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white"
-					>
-						<a href="#about">ABOUT</a>
-					</li>
-					<li
-						class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white"
-					>
-						<a href="#project">PROJECT</a>
-					</li>
-					<li
-						class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white"
-					>
-						<a href="#resume">RESUME</a>
-					</li>
-					<li
-						class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white"
-					>
-						<a href="#contact">CONTACT</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+  <nav class="z-10 fixed top-0 left-0 w-screen flex justify-center items-center bg-slate-800 backdrop-blur-md shadow-md">
+    <!-- Hamburger Icon for Mobile View -->
+    <button
+      id="menu-btn"
+      class="lg:hidden p-2 text-white"
+      onclick="toggleMenu()"
+    >
+      <i class="fa fa-bars"></i> <!-- Font Awesome Hamburger Icon -->
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="flex justify-center items-center text-base px-4 font-semibold text-center">
+      <li class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white">
+        <a href="#home">HOME</a>
+      </li>
+      <li class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white">
+        <a href="#about">ABOUT</a>
+      </li>
+      <li class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white">
+        <a href="#project">PROJECT</a>
+      </li>
+      <li class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white">
+        <a href="#resume">RESUME</a>
+      </li>
+      <li class="px-2 py-2 mx-5 hover:text-red-600 transition-colors text-white">
+        <a href="#contact">CONTACT</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 		<main
 			class="h-screen flex items-center justify-center bg-bottom bg-cover"
 			style="background-image: url(./images/bg_main.jpg)"
@@ -235,4 +231,11 @@ Git Hub: https://github.com/Karina-16
 			></a>
 		</footer>
 	</body>
+	<script>
+  // Toggle menu visibility for mobile view
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden'); // Toggles 'hidden' class to show/hide menu
+  }
+</script>
 </html>
